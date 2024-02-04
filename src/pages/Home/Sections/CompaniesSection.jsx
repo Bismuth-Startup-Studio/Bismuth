@@ -1,8 +1,11 @@
 import React from 'react'
-import Button from '../../../components/Button'
+import {Link} from "react-router-dom"
+import { routes } from '../../../utils/routes'
+import CompanyCard from '../../../components/CompanyCard'
 import dofdat from "../../../assets/logos/Dofdat.svg"
 import nothad from "../../../assets/logos/Nothad.svg"
 import deliver from "../../../assets/logos/delivery.svg"
+
 
 function CompaniesSection() {
 
@@ -35,26 +38,10 @@ function CompaniesSection() {
           </div>
         </div>
         {/* <Button>More Companies</Button> */}
-        <button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[24px] font-[700]">More Companies</button>
+        <Link to={routes.get("Companies").path}><button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[24px] font-[700]">More Companies</button></Link>
       </div>
     </section>
   )
 }
-
-const CompanyCard = ({image, title, subtitle, desc}) => {
-  return(
-    <div className='flex flex-col md:flex-row gap-[30px] w-fit md:w-[677px] min-h-[329px] p-[30px] bg-white'>
-      <img className='object-top w-[300px]' src={image} alt="" />
-      <div className='flex flex-col gap-[40px]'>
-        <div>
-          <h2 className='w-[300px] md:w-full text-[24px]'>{title}</h2>
-          <h3 className='font-news-reader italic font-[300] text-[16px]'>{subtitle}</h3>
-        </div>
-        <p className='w-[300px] md:w-full text-[16px] font-[300]'>{desc}</p>
-      </div>
-    </div>
-  )
-}
-
 
 export default CompaniesSection

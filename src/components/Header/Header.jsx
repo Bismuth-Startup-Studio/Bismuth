@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import headerBg from "../../assets/images/Noise & Texture.png"
 
-function Header({children}) {
+function Header({children, title}) {
   return (
     <header
       className='relative px-app-padding' 
@@ -18,8 +18,12 @@ function Header({children}) {
         }}
       />
       <div className='relative'>
-        <Navbar/>
-        {children}
+      <Navbar/>
+      {title ? 
+        <h1 className='italic font-news-reader font-[300] text-center text-light-black text-[64px] pb-[100px] pt-[30px]'>{title}</h1>
+        :
+        children
+      }
       </div>
     </header>
   )

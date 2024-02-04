@@ -2,7 +2,6 @@ import React from 'react'
 import {routes, routeNames} from '../../utils/routes'
 import { Link, useLocation } from 'react-router-dom'
 import logo from "../../assets/logos/bismuth-logo.svg"
-import Button from '../Button'
 
 function Navbar() {
 
@@ -10,8 +9,8 @@ function Navbar() {
 
     return (
         <div className='flex flex-col items-center md:flex-row gap-5 py-10 justify-between'>
-            <div className='flex flex-wrap justify-between items-center gap-10'>
-                <img src={logo} alt="" />
+            <div className='flex flex-wrap justify-center items-center gap-10'>
+                <Link to="/"><img src={logo} alt="" /></Link>
                 <nav className='flex gap-5'>
                     {routeNames.map(route => <Link key={route} to={routes.get(route).path} >
                         <div>
@@ -21,7 +20,7 @@ function Navbar() {
                     </Link>)}
                 </nav>
             </div>
-            <button className='px-[15px] py-1 text-[16px] w-fit rounded-3xl bg-primary-red text-white'>Start A Project</button>
+            <Link to="/#project"><button className='px-[15px] py-1 text-[16px] w-fit rounded-3xl bg-primary-red text-white'>Start A Project</button></Link>
         </div>
     )
 }

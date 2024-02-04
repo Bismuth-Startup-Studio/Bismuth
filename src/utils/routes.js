@@ -1,4 +1,6 @@
 import Home from "../pages/Home/Home"
+import Team from "../pages/Team/Team"
+import Company from "../pages/Company/Company"
 
 export const routes = new Map([
     [
@@ -12,20 +14,20 @@ export const routes = new Map([
         "Companies", 
         {
             path:"/companies",
-            component: <Home/>
+            component: <Company/>
         }
     ],
     [
         "Team", 
         {
             path: "/team",
-            component: <Home/>
+            component: <Team/>
         }
     ],
     [
         "Contact", 
         {
-            path: "/contanct",
+            path: "#footer",
             component: <Home/>
         }
     ],

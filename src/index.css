@@ -11,11 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @font-face {
   font-family: newsreader;
   src: url("./assets/fonts/Newsreader-VariableFont_opsz\,wght.ttf");
@@ -27,4 +22,5 @@ code {
   --secondary-red: #D64D4D;
   --light-black: #343434;
   --dark-black: #202020;
+  --light-red: #FBF3F3;
 }

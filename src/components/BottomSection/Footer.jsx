@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useEffect, useRef} from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import bismuthGrey from "../../assets/logos/bismuth-logo-grey.svg"
 import { routes, routeNames } from '../../utils/routes'
 import insta from "../../assets/logos/socials/instagram.svg"
@@ -8,8 +8,16 @@ import facbook from "../../assets/logos/socials/facebook.svg"
 import youtube from "../../assets/logos/socials/youtube.svg"
 
 function Footer() {
+  const footerRef = useRef()
+
+  const {hash, key} = useLocation()
+
+  useEffect(() => {
+    if(hash === "#footer") footerRef.current.scrollIntoView({ behavior: 'smooth' })
+  },[key])
+
   return (
-    <div className='flex flex-col gap-10 md:flex-row justify-between py-[50px] text-[16px] text-[#7C7C7C] px-app-padding'>
+    <div ref={footerRef} className='flex flex-col gap-10 md:flex-row justify-between py-[50px] text-[16px] text-[#7C7C7C] px-app-padding'>
       <div className='flex flex-col text-[16px] font-[300]'>
         <img className='mb-[32px]' src={bismuthGrey} alt="" />
         <p className='mb-[50px]'>
@@ -32,7 +40,7 @@ bismuth@gmail.com<br/>
           <p className='font-[600]'>You can find us around the world</p>
           <p>Columbus, Ohio | Santasi - Kumasi | Accra</p>
         </div>
-        <div className='flex gap-[25px]'>
+        <div className='flex items-center gap-[25px]'>
           <Link>
             <img src={insta} alt="" />
           </Link>

@@ -1,0 +1,12 @@
+.countries{
+    animation: scroll infinite forwards linear 10s;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(calc(-50% - 25px))
+    }
+}
