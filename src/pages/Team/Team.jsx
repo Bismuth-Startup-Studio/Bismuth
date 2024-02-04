@@ -143,12 +143,12 @@ function Team() {
                 <h2 className='italic text-[24px] text-center font-news-reader font-[300] mb-[30px]'>Our Team Cuts Across</h2>
                 <div className='overflow-hidden'>
                     <div className='countries flex w-max gap-[50px]'>
-                        {flags.map((flag, index) => <img key={index} src={flag} alt='' />)}
-                        {flags.map((flag, index) => <img key={index} src={flag} alt='' />)}
+                        {flags.map((flag, index) => <img className='h-[80px] md:h-[120px] lg:h-[150px] object-cover' key={index} src={flag} alt='' />)}
+                        {flags.map((flag, index) => <img className='h-[80px] md:h-[120px] lg:h-[150px] object-cover' key={index} src={flag} alt='' />)}
                     </div>
                 </div>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-[100px] mb-[200px] justify-center gap-10 gap-y-[150px] px-app-padding'>
+            <div className='grid grid-cols-2 place-items-start lg:grid-cols-3 mt-[100px] mb-[200px] gap-10 gap-y-[150px] px-app-padding'>
                 {members.map((member, index) => <MemberCard key={index} {...member}/>)}
             </div>
             <Footer/>

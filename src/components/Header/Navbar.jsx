@@ -8,9 +8,9 @@ function Navbar() {
     const location = useLocation()
 
     return (
-        <div className='flex flex-col items-center md:flex-row gap-5 py-10 justify-between'>
+        <div className=' flex flex-col items-center md:flex-row gap-5 py-10 justify-between'>
             <div className='flex flex-wrap justify-center items-center gap-10'>
-                <Link to="/"><img src={logo} alt="" /></Link>
+                <Link to="/"><img width={170} src={logo} alt="" /></Link>
                 <nav className='flex gap-5'>
                     {routeNames.map(route => <Link key={route} to={routes.get(route).path} >
                         <div>

@@ -19,7 +19,7 @@ function Footer() {
   return (
     <div ref={footerRef} className='flex flex-col gap-10 md:flex-row justify-between py-[50px] text-[16px] text-[#7C7C7C] px-app-padding'>
       <div className='flex flex-col text-[16px] font-[300]'>
-        <img className='mb-[32px]' src={bismuthGrey} alt="" />
+        <img className='mb-[32px]' width="200" src={bismuthGrey} alt="" />
         <p className='mb-[50px]'>
         info@bismuth.com<br/>
 bismuth@gmail.com<br/>

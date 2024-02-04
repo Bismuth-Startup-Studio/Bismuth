@@ -58,12 +58,12 @@ function Company() {
     businesses across various verticals in a large number of
     countries. Explore our portfolio below.</h2>
             </div>
-            <div className="grid grid-cols-[repeat(auto-fit,minmax(587px,1fr))] mt-[100px] px-app-padding mb-[200px] gap-y-10 justify-between">
-                {companies.map((company,index )=> <div>
+            <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(577px,1fr))] mt-[100px] px-app-padding mb-[200px] gap-y-10 justify-between">
+                {companies.map((company,index )=> 
                     <div className='company-card w-fit m-auto bg-white'>
                         <CompanyCard key={index} {...company}/>
                     </div>
-                </div>)}
+                )}
             </div>
             <Form/>
             <Footer/>

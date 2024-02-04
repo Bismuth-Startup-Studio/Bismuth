@@ -1,5 +1,5 @@
 .countries{
-    animation: scroll infinite forwards linear 10s;
+    animation: scroll infinite forwards linear 30s;
 }
 
 @keyframes scroll {

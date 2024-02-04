@@ -1,0 +1,46 @@
+.we-build div{
+    animation: scale 0.5s ease-out forwards;
+    transform-origin: left;
+}
+
+.we-build h1{
+    animation: appear 0.4s ease-out 0.3s forwards ;
+    opacity: 0;
+    transform: translateX(-40px);
+}
+
+.sdg{
+    transform: translateY(30px);
+    opacity: 0;
+    animation: pop-up 0.4s ease-out 0.5s forwards;
+}
+
+.paragraph{
+    transform: translateY(30px);
+    opacity: 0;
+    animation: pop-up 0.4s ease-out 0.8s forwards;
+}
+
+@keyframes scale {
+    from{
+        transform: scaleX(0);
+    }
+
+    to{
+        width : scaleX(1);
+    }
+}   
+
+@keyframes appear {
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pop-up {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

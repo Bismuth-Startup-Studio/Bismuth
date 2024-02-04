@@ -14,6 +14,7 @@ function Header({children, title}) {
         className='absolute inset-0 w-full h-full'
         style={{
           background: `url("${headerBg}"), lightgray 0% 0% / 88.0859375px 88.0859375px repeat`,
+          backgroundAttachment: "fixed",
           mixBlendMode: "overlay"
         }}
       />
