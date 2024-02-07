@@ -35,8 +35,11 @@ ${formData.get("idea")}
             `,
         })
 
-        console.log(emailResponse)
+        return Response.json({
+            message: "message sent successfully",
+        })
+
     } catch (error:any) {
-        console.log(error.message)
+        throw new Error(error)
     }
 }
