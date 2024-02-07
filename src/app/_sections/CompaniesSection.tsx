@@ -1,10 +1,9 @@
 import React from 'react'
-import {Link} from "react-router-dom"
-import { routes } from '../../../utils/routes'
-import CompanyCard from '../../../components/CompanyCard'
-import dofdat from "../../../assets/logos/Dofdat.svg"
-import nothad from "../../../assets/logos/Nothad.svg"
-import deliver from "../../../assets/logos/delivery.svg"
+import Link from 'next/link'
+import CompanyCard from '@/components/CompanyCard'
+import dofdat from "@/assets/logos/Dofdat.svg"
+import nothad from "@/assets/logos/Nothad.svg"
+import deliver from "@/assets/logos/delivery.svg"
 
 
 function CompaniesSection() {
@@ -38,7 +37,7 @@ function CompaniesSection() {
           </div>
         </div>
         {/* <Button>More Companies</Button> */}
-        <Link to={routes.get("Companies").path}><button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[24px] font-[700]">More Companies</button></Link>
+        <Link href="/company"><button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[24px] font-[700]">More Companies</button></Link>
       </div>
     </section>
   )

@@ -1,9 +1,10 @@
-import design from "../../../assets/images/skills/design.svg"
-import engineering from "../../../assets/images/skills/engineering.svg"
-import hr from "../../../assets/images/skills/hr.svg"
-import it from "../../../assets/images/skills/IT.svg"
-import recruit from "../../../assets/images/skills/recruit.svg"
-import operations from "../../../assets/images/skills/operations.svg"
+import design from "@/assets/images/skills/design.svg"
+import engineering from "@/assets/images/skills/engineering.svg"
+import hr from "@/assets/images/skills/hr.svg"
+import it from "@/assets/images/skills/IT.svg"
+import recruit from "@/assets/images/skills/recruit.svg"
+import operations from "@/assets/images/skills/operations.svg"
+import Image from "next/image"
 
 function SkillsSection() {
     const skills=[{
@@ -39,10 +40,14 @@ function SkillsSection() {
     )
 }
 
-const Skill =({image, text}) => {
+const Skill =
+    (
+        {image, text} :
+        {image:any, text: String}
+    ) => {
     return(
         <div className='flex flex-col items-center justify-between'>
-            <img className="w-[60px] md:w-[100px]" src={image} alt="" />
+            <Image src={image.src} width={image.width} height={image.height} className="w-[60px] md:w-[100px]" alt="" />
             <span className='text-[30px] md:text-[48px] text-primary-red'>{text}</span>
         </div>
     )

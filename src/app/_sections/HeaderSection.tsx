@@ -1,5 +1,5 @@
-import Header from "../../../components/Header/Header"
-import "../styles/header.css"
+import Header from "@/components/Header/Header"
+import "../_styles/header.css"
 
 function HeaderSection() {
   return (

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import Navbar from './Navbar'
 import headerBg from "../../assets/images/Noise & Texture.png"
 
-function Header({children, title}) {
+function Header({children, title} : {children?: ReactNode, title?: String }) {
   return (
     <header
       className='relative px-app-padding' 
@@ -13,7 +13,7 @@ function Header({children, title}) {
       <div 
         className='absolute inset-0 w-full h-full'
         style={{
-          background: `url("${headerBg}"), lightgray 0% 0% / 88.0859375px 88.0859375px repeat`,
+          background: `url("${headerBg.src}"), lightgray 0% 0% / 88.0859375px 88.0859375px repeat`,
           backgroundAttachment: "fixed",
           mixBlendMode: "overlay"
         }}

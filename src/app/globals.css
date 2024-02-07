@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: newsreader;
+  src: url("../assets/fonts/Newsreader-VariableFont_opsz\,wght.ttf");
+}
+
+
+:root{
+  --app-padding: 5vw;
+  --primary-red: #B9100B;
+  --secondary-red: #D64D4D;
+  --light-black: #343434;
+  --dark-black: #202020;
+  --light-red: #FBF3F3;
+}
+
+html{
+  scroll-behavior: smooth;
+}

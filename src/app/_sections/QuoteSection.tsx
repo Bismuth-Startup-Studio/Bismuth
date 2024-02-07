@@ -1,4 +1,4 @@
-import quoteBg from "../../../assets/images/Minimalistic Brown Fashion Photo Collage (1) 1.png"
+import quoteBg from "@/assets/images/Minimalistic Brown Fashion Photo Collage (1) 1.png"
 
 function QuoteSection() {
   return (
@@ -8,7 +8,7 @@ function QuoteSection() {
         <div
             className="h-[400px]"
             style={{
-                background: `url("${quoteBg}"), lightgray -43px -529px / 104.983% 171.957% no-repeat`
+                background: `url("${quoteBg.src}"), lightgray -43px -529px / 104.983% 171.957% no-repeat`
             }}
         />
         <div className="flex flex-col gap-[80px] w-[70vw] py-10 md:py-[115px] px-10 md:px-[100px] bg-white m-auto -mt-[250px] rounded-md">
