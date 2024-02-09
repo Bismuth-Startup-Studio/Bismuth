@@ -53,12 +53,12 @@ function Company() {
     return (
         <>
             <Header title="Our Companies" />
-            <div className='bg-light-red py-[100px] px-[5vw]'>
-                <h2 className='font-news-reader italic text-[32px] text-center'>We are building and operationally developing high potential
+            <div className='bg-light-red py-[50px] md:py-[70px] lg:py-[100px] px-[5vw]'>
+                <h2 className='font-news-reader italic text-[20px] md:text-[25px] lg:text-[32px] text-center'>We are building and operationally developing high potential
     businesses across various verticals in a large number of
     countries. Explore our portfolio below.</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(577px,1fr))] mt-[100px] px-app-padding mb-[200px] gap-y-10 justify-between">
+            <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(577px,1fr))] mt-[100px] px-app-padding mb-[200px] gap-y-10 justify-between">
                 {companies.map((company,index )=> 
                     <div className='company-card w-fit m-auto bg-white'>
                         <CompanyCard key={index} {...company}/>

@@ -21,7 +21,7 @@ function Header({children, title} : {children?: ReactNode, title?: String }) {
       <div className='relative'>
       <Navbar/>
       {title ? 
-        <h1 className='italic font-news-reader font-[300] text-center text-light-black text-[64px] pb-[100px] pt-[30px]'>{title}</h1>
+        <h1 className='italic font-news-reader font-[300] text-center text-light-black text-[40px] md:text-[50px] lg:text-[64px] pb-[50px] lg:pb-[100px] pt-[30px]'>{title}</h1>
         :
         children
       }

@@ -16,9 +16,9 @@ function BenefitsSection() {
 
 const Benefit = ({number, text} : {number: string, text: String}) => {
     return(
-        <div className='flex flex-col gap-[60px] py-[50px] px-[50px] flex-1 border-primary-red border-[1px] border-solid '>
-            <span className='text-[48px] w-[75px] h-[75px] rounded-full text-white bg-primary-red grid place-items-center'>{number}</span>
-            <p className='text-[32px] text-primary-red leading-[1.2]'>{text}</p>
+        <div className='flex flex-col gap-[25px] py-[50px] px-[50px] flex-1 border-primary-red border-[1px] border-solid '>
+            <span className='text-[38px] w-[55px] h-[55px] rounded-full text-white bg-primary-red grid place-items-center'>{number}</span>
+            <p className='text-[28px] text-primary-red leading-[1]'>{text}</p>
         </div>
     )
 }

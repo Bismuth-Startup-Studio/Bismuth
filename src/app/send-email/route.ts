@@ -1,8 +1,10 @@
-"use server"
 const nodemailer = require("nodemailer")
 const {google} = require("googleapis")
 
-export default async function sendEmail(formData:FormData){
+export async function POST(req:Request){
+
+    const {name, email, idea} = await req.json()
+
 
     const {GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, GOOGLE_REFRESH_TOKEN, EMAIL} = process.env
 
@@ -27,26 +29,32 @@ export default async function sendEmail(formData:FormData){
 
     try {
         const emailResponse =  await transport.sendMail({
-            from: `${formData.get("name")} - ${formData.get("email")} <${formData.get("email")}>`,
+            from: `${name} - ${email} <${email}>`,
             to: process.env.EMAIL,
-            subject: `Bismuth Partnership Request - ${formData.get("name")} <${formData.get("email")}>`,
+            subject: `Bismuth Partnership Request - ${name} <${name}>`,
             text:  `    
-    ${formData.get("idea")}
+${idea}
             `,
         })        
 
         if(emailResponse){
-            return {
+            return Response.json({
                 success: "message sent successfully"
-            }
+            },{
+                status: 200
+            })
         }
 
-        return {
+        return Response.json({
             error: "error, message not sent"
-        }
+        },{
+            status: 500
+        })
     } catch (error) {
-        return {
+        return Response.json({
             error: "error, message not sent"
-        }
+        },{
+            status: 500
+        })
     }   
 }
