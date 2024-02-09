@@ -24,7 +24,7 @@ bismuth@gmail.com<br/>
           <Link className='font-[600]' href="/">About</Link>
           <Link className='font-[600]' href="/companies">Companies</Link>
           <Link className='font-[600]' href="/team">Team</Link>
-          <Link className='font-[600]' href="/contacts">Get In touch</Link>
+          <Link className='font-[600]' href="#project">Get In touch</Link>
           <Link className='font-[600]' href="/">Join the Journey</Link>
           <Link className='font-[600]' href="/">About</Link>
         </div>

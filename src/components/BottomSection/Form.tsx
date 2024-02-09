@@ -47,6 +47,8 @@ function Form() {
             setDisabled(false)
         }
 
+        form.current?.reset()
+
         toast.dismiss(toastId)
     }
 

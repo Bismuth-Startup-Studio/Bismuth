@@ -37,7 +37,7 @@ function CompaniesSection() {
           </div>
         </div>
         {/* <Button>More Companies</Button> */}
-        <Link href="/company"><button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[16px] md:text-[20px] font-[700]">More Companies</button></Link>
+        <Link href="/companies"><button className="block text-secondary-red bg-white py-3 px-[20px] rounded-full m-auto mt-[30px] text-[16px] md:text-[20px] font-[700]">More Companies</button></Link>
       </div>
     </section>
   )
