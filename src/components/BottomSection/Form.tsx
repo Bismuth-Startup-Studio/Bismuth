@@ -1,5 +1,5 @@
 "use client"
-import logo from "../../assets/images/Noise & Texture.png"
+import logo from "../../assets/images/Noise & Texture.svg"
 import { toast } from "react-hot-toast"
 import { useRef, useState } from "react"
 

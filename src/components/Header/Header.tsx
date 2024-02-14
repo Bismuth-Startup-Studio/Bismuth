@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
 import Navbar from './Navbar'
-import headerBg from "../../assets/images/Noise & Texture.png"
+import headerBg from "../../assets/images/Noise & Texture.svg"
 
 function Header({children, title} : {children?: ReactNode, title?: String }) {
   return (
     <header
-      className='relative px-app-padding' 
+      className='relative px-app-padding pt-[70px]' 
       style={{
         background: `conic-gradient(from 90deg at 50% 100%, rgba(185, 16, 11, 0.29) 0.035999999090563506deg, rgba(185, 16, 11, 0.15) 180.4321575164795deg, rgba(185, 16, 11, 0.00) 271.4998698234558deg, rgba(185, 16, 11, 0.30) 360deg), var(--color-gray-50, #FEFEFE)`,
       }}
